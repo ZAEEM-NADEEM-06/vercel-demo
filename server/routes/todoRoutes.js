@@ -12,11 +12,15 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const todo = await Todo.create({
-    title: req.body.title,
-  });
+  try {
+    const todo = await Todo.create({
+      title: req.body.title,
+    });
 
-  res.json(todo);
+    res.json(todo);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 });
 
 module.exports = router;
