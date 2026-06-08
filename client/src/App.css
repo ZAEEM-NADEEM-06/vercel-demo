@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 700px;
+  background: #111827;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+}
+
+.card h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #2563eb;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  background: #1f2937;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  border-left: 4px solid #2563eb;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h1 {
+    font-size: 1.6rem;
+  }
+
+  input,
+  button {
+    padding: 12px;
+  }
+}
