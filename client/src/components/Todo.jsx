@@ -6,8 +6,9 @@ function Todo() {
 
   const fetchTodos = async () => {
     try {
+      const apiUrl = import.meta.env.VITE_API_URL || "https://backend-url.vercel.app/api"; // UPDATE THIS TO YOUR BACKEND URL
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/todos`
+        `${apiUrl}/todos`
       );
 
       const data = await response.json();
@@ -27,8 +28,9 @@ function Todo() {
     if (!title.trim()) return;
 
     try {
+      const apiUrl = import.meta.env.VITE_API_URL || "https://backend-url.vercel.app/api"; // UPDATE THIS TO YOUR BACKEND URL
       await fetch(
-        `${import.meta.env.VITE_API_URL}/todos`,
+        `${apiUrl}/todos`,
         {
           method: "POST",
           headers: {
