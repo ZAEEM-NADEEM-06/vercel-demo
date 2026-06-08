@@ -9,7 +9,7 @@ const app = express();
 // 1. Updated CORS Configuration
 app.use(cors({
   origin: [
-    "https://zaeem-todo.vercel.app/", // Your live frontend domain
+    "https://zaeem-todo.vercel.app", // Your live frontend domain (removed trailing slash!)
     "http://localhost:5173",                     // Standard Vite local development port
     "http://localhost:3000"                      // Standard CRA local development port
   ],
